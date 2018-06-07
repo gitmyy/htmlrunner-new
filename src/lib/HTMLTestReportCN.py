@@ -1126,10 +1126,11 @@ class HTMLTestRunner(Template_mixin):
             ns = round(ns, 2)
             sum_ns += ns  # 把所有用例的每次耗时相加
             # format class description
-            if cls.__module__ == "__main__":
-                name = cls.__name__
-            else:
-                name = "%s.%s" % (cls.__module__, cls.__name__)
+            # if cls.__module__ == "__main__":
+            #     name = cls.__name__
+            # else:
+            #     name = "%s.%s" % (cls.__module__, cls.__name__)
+            name = cls.__name__
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
             # desc = doc and '%s - %s' % (name, doc) or name
 
